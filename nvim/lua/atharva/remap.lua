@@ -20,3 +20,12 @@ keymap("n", "j", "gj", opts)
 keymap("n", "gj", "j", opts)
 keymap("n", "k", "gk", opts)
 keymap("n", "gk", "k", opts)
+
+-- Tabs
+keymap('n', '<leader>c', ':tabclose<CR>', opts)
+keymap('n', '<Tab>', ':tabnext<CR>', opts)
+keymap('n', '<S-Tab>', ':tabprevious<CR>', opts)
+
+-- Buffers
+keymap('n', '<leader>bn', ':bnext<CR>', opts)
+keymap('n', '<leader>bN', ':bprevious<CR>', opts)

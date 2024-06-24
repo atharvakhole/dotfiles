@@ -32,8 +32,13 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
     vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
 
-    vim.keymap.set('n', '<C-s>', '<cmd>LspZeroFormat!<cr>', {buffer = true})
-
-end )
+    vim.keymap.set('n', '<C-s>', '<cmd>LspZeroFormat!<cr>', { buffer = true })
+end)
 
 lsp.setup()
+
+-- LSP CONFIG FOR GODOT
+require("lspconfig")["gdscript"].setup({
+    name = "godot",
+    cmd = vim.lsp.rpc.connect("127.0.0.1", "6005"),
+})

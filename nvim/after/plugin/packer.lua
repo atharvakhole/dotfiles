@@ -25,11 +25,18 @@ return require('packer').startup(function(use)
 
     use { "catppuccin/nvim", as = "catppuccin" }
     use { "ellisonleao/gruvbox.nvim" }
+    use { 'nyoom-engineering/oxocarbon.nvim' }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
     -- debugger (DAP)
-    use { "mfussenegger/nvim-dap" }
-    use { "rcarriga/nvim-dap-ui" }
+    use {
+        "mfussenegger/nvim-dap",
+        commit = 'e8dd631'
+    }
+    use {
+        "rcarriga/nvim-dap-ui",
+        commit = 'bdb94e3'
+    }
 
     -- rust-tools.nvim
     use { "simrat39/rust-tools.nvim" }
@@ -59,7 +66,11 @@ return require('packer').startup(function(use)
     }
 
     -- indent-blankline
-    use { "lukas-reineke/indent-blankline.nvim" }
+    use {
+        "lukas-reineke/indent-blankline.nvim",
+        commit = '86d1b71'
+
+    }
 
     -- lsp
     use {
@@ -96,7 +107,10 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/vim-vsnip'
-    use 'uga-rosa/cmp-dictionary'
+    use {
+        'uga-rosa/cmp-dictionary',
+        commit = '3a6035b',
+    }
 
     -- Wrapping plaintext files
     use "andrewferrier/wrapping.nvim"
@@ -109,10 +123,16 @@ return require('packer').startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
     --
-    -- use({
-    --     "iamcco/markdown-preview.nvim",
-    --     run = "cd app && npm install",
-    --     setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-    --     ft = { "markdown" },
-    -- })
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+        ft = { "markdown" },
+    })
+    -- Async IO
+    use { "nvim-neotest/nvim-nio" }
+
+
+    -- right-corner-diagnostics
+    use { 'Mofiqul/trld.nvim' }
 end)
