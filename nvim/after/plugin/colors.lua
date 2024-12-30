@@ -1,6 +1,6 @@
 vim.opt.background = "dark" -- set this to dark or light
 function ColorMyPencils(color)
-    color = color or "oxocarbon"
+    color = color or "gruvbox"
     vim.cmd.colorscheme(color)
 end
 
@@ -17,6 +17,6 @@ vim.api.nvim_set_hl(0, "NotifyDEBUGBorder", { fg = "#ffffff", bg = "NONE" })
 vim.api.nvim_set_hl(0, "NotifyTRACEBorder", { fg = "#ffffff", bg = "NONE" })
 
 -- Tab color override for oxocarbon
-vim.api.nvim_set_hl(0, "TabLineFill", { fg = "#262626", bg = "#78a9ff" })
-vim.api.nvim_set_hl(0, "TabLine", { fg = "#ffffff", bg = "#262626" })
-vim.api.nvim_set_hl(0, "TabLineSel", { fg = "#262626", bg = "#ffffff" })
+vim.api.nvim_set_hl(0, "TabLineFill", { fg = "#ebdbb2", bg = "#3c3836" })
+vim.api.nvim_set_hl(0, "TabLine", { fg = "#ebdbb2", bg = "#3c3836" })
+vim.api.nvim_set_hl(0, "TabLineSel", { fg = "#282828", bg = "#fabd2f" })

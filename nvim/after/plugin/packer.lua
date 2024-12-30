@@ -26,7 +26,11 @@ return require('packer').startup(function(use)
     use { "catppuccin/nvim", as = "catppuccin" }
     use { "ellisonleao/gruvbox.nvim" }
     use { 'nyoom-engineering/oxocarbon.nvim' }
-    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+    use('nvim-treesitter/nvim-treesitter',
+        {
+            run = ':TSUpdate',
+            tag = 'v0.8.0'
+        })
 
     -- debugger (DAP)
     use {
@@ -48,7 +52,10 @@ return require('packer').startup(function(use)
     }
 
     -- auto-ts-tag for html/tsx tag completion
-    use "windwp/nvim-ts-autotag"
+    use {
+        "windwp/nvim-ts-autotag",
+        commit = 'e254b30'
+    }
     require("nvim-ts-autotag").setup()
 
     -- lualine
@@ -112,16 +119,26 @@ return require('packer').startup(function(use)
         commit = '3a6035b',
     }
 
+
+    -- Scala Support
+    use({
+        "scalameta/nvim-metals",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "mfussenegger/nvim-dap",
+        },
+    })
+
     -- Wrapping plaintext files
     use "andrewferrier/wrapping.nvim"
     require("wrapping").setup()
 
     -- Markdown preview
-    -- install without yarn or npm
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-    })
+    -- -- install without yarn or npm
+    -- use({
+    --     "iamcco/markdown-preview.nvim",
+    --     run = function() vim.fn["mkdp#util#install"]() end,
+    -- })
     --
     use({
         "iamcco/markdown-preview.nvim",
@@ -135,4 +152,6 @@ return require('packer').startup(function(use)
 
     -- right-corner-diagnostics
     use { 'Mofiqul/trld.nvim' }
+
+    use { 'lambdalisue/vim-suda' }
 end)
