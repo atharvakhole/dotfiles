@@ -1,3 +1,6 @@
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
 vim.g.mapleader = " "
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("i", "kj", "<Esc>")
@@ -22,10 +25,10 @@ keymap("n", "k", "gk", opts)
 keymap("n", "gk", "k", opts)
 
 -- Tabs
-keymap('n', '<leader>c', ':tabclose<CR>', opts)
-keymap('n', '<Tab>', ':tabnext<CR>', opts)
-keymap('n', '<S-Tab>', ':tabprevious<CR>', opts)
+keymap("n", "<leader>c", ":tabclose<CR>", opts)
+keymap("n", "<Tab>", ":tabnext<CR>", opts)
+keymap("n", "<S-Tab>", ":tabprevious<CR>", opts)
 
 -- Buffers
-keymap('n', '<leader>bn', ':bnext<CR>', opts)
-keymap('n', '<leader>bN', ':bprevious<CR>', opts)
+keymap("n", "<leader>bn", ":bnext<CR>", opts)
+keymap("n", "<leader>bN", ":bprevious<CR>", opts)
