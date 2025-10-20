@@ -4,3 +4,5 @@
 vim.g.snacks_animate = false
 vim.opt.smoothscroll = false
 vim.o.showtabline = 2
+vim.opt.showmode = true -- Shows "recording @q" in command area
+vim.opt.showcmd = true -- Shows command being typed

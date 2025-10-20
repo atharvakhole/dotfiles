@@ -1,0 +1,59 @@
+window:
+  padding:
+    x: 40
+    y: 20
+  opacity: 1
+font:
+  normal:
+    family: "Hack Nerd Font"
+colors:
+  # Moonlight Theme - Cohesive and Functional
+  primary:
+    background: "#0e0e1a" # Warm dark background
+    foreground: "#cdd6f4" # Soft lavender text
+
+  # Cursor colors
+  cursor:
+    text: "#1e1e2e"
+    cursor: "#f9e2af" # Yellow cursor for visibility
+
+  # Selection colors
+  selection:
+    text: "#cdd6f4"
+    background: "#2a2a3e"
+
+  # Normal colors
+  normal:
+    black: "#181825" # Darker variant
+    red: "#f38ba8" # Soft pink-red
+    green: "#a6e3a1" # Matches constants color
+    yellow: "#f9e2af" # Matches definitions color
+    blue: "#89b4fa" # Matches declarations color
+    magenta: "#cba6f7" # Lavender purple
+    cyan: "#94e2d5" # Soft cyan
+    white: "#cdd6f4" # Base foreground
+
+  # Bright colors
+  bright:
+    black: "#585b70" # Punctuation grey
+    red: "#f38ba8" # Same as normal (intentionally)
+    green: "#a6e3a1" # Same as normal
+    yellow: "#f9e2af" # Same as normal
+    blue: "#89b4fa" # Same as normal
+    magenta: "#cba6f7" # Same as normal
+    cyan: "#94e2d5" # Same as normal
+    white: "#ffffff" # Pure white for maximum contrast
+
+  # Dim colors (optional, for when text is dimmed)
+  dim:
+    black: "#45475a"
+    red: "#f38ba8"
+    green: "#a6e3a1"
+    yellow: "#f9e2af"
+    blue: "#89b4fa"
+    magenta: "#cba6f7"
+    cyan: "#94e2d5"
+    white: "#7f849c" # Comment color
+
+# Remove or comment out the theme line since we're using custom colors
+# theme: Gruvbox-Dark

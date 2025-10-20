@@ -18,11 +18,11 @@ return {
         on_highlights = nil, -- We'll define this below
         on_colors = function(colors)
           -- Custom Moonlight palette
-          colors.bg = "#1e1e2e" -- Warm dark background
-          colors.bg_dark = "#181825" -- Darker variant
+          colors.bg = "#0e0e1a" -- Warm dark background
+          colors.bg_dark = "#0b0b17" -- Darker variant
           colors.bg_highlight = "#2a2a3e"
           colors.fg = "#cdd6f4" -- Soft lavender text
-          colors.fg_dark = "#7f849c" -- Dimmed text
+          colors.fg_dark = "#a1a7c4" -- Dimmed text
           colors.fg_gutter = "#45475a"
 
           -- The 4 functional colors
@@ -87,13 +87,13 @@ return {
           -- GREEN: Constants (strings, numbers, booleans)
           -- These are reference points in your code
           -- ============================================
-          hl.String = { fg = c.green }
+          hl.String = { fg = c.dark_green }
           hl.Character = { fg = c.green }
           hl.Number = { fg = c.green }
           hl.Float = { fg = c.green }
           hl.Boolean = { fg = c.green }
           hl.Constant = { fg = c.green }
-          hl["@string"] = { fg = c.green }
+          hl["@string"] = { fg = c.dark_green }
           hl["@number"] = { fg = c.green }
           hl["@boolean"] = { fg = c.green }
           hl["@constant"] = { fg = c.green }
@@ -254,9 +254,6 @@ return {
           hl.SignColumn = { bg = c.bg }
           hl.FoldColumn = { fg = c.fg_gutter }
 
-          hl.StatusLine = { fg = c.fg, bg = c.bg_highlight }
-          hl.StatusLineNC = { fg = c.fg_dark, bg = c.bg_dark }
-
           hl.Visual = { bg = c.dark_blue }
           hl.VisualNOS = { bg = c.dark_blue }
 
@@ -332,6 +329,9 @@ return {
           hl.NeoTreeGitModified = { fg = c.yellow }
           hl.NeoTreeGitAdded = { fg = c.green }
           hl.NeoTreeGitDeleted = { fg = c.red }
+          hl.NeoTreeNormal = { bg = c.bg_dark }
+          hl.NeoTreeEndOfBuffer = { bg = c.bg_dark }
+          hl.NeoTreeNC = { bg = c.bg_dark }
 
           -- ============================================
           -- Which-key
