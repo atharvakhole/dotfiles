@@ -15,6 +15,6 @@ dir="$HOME/.config/rofi/launchers/type-1"
 theme='style-11'
 
 ## Run
-rofi \
-    -show drun \
-    -theme ${dir}/${theme}.rasi
+~/.config/rofi/scripts/rofi-sway.sh \
+  -show drun \
+  -theme ${dir}/${theme}.rasi

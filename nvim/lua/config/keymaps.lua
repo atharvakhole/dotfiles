@@ -32,3 +32,23 @@ keymap("n", "<S-Tab>", ":tabprevious<CR>", opts)
 -- Buffers
 keymap("n", "<leader>bn", ":bnext<CR>", opts)
 keymap("n", "<leader>bN", ":bprevious<CR>", opts)
+
+-- Force override LazyVim's picker keymaps to use FzfLua
+vim.keymap.set(
+  "n",
+  "<leader>ff",
+  "<cmd>FzfLua files<cr>",
+  { desc = "Find Files (Root Dir)", noremap = true, silent = true }
+)
+vim.keymap.set(
+  "n",
+  "<leader><space>",
+  "<cmd>FzfLua files<cr>",
+  { desc = "Find Files (Root Dir)", noremap = true, silent = true }
+)
+vim.keymap.set(
+  "n",
+  "<leader>/",
+  "<cmd>FzfLua live_grep<cr>",
+  { desc = "Grep (Root Dir)", noremap = true, silent = true }
+)

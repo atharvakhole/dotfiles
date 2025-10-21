@@ -112,21 +112,9 @@ if ! shopt -oq posix; then
   fi
 fi
 . "$HOME/.cargo/env"
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
 
-# HADOOP ENVIRONMENT
-export HADOOP_HOME=/usr/local/hadoop
-export HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
-export HADOOP_MAPRED_HOME=/usr/local/hadoop
-export HADOOP_COMMON_HOME=/usr/local/hadoop
-export HADOOP_HDFS_HOME=/usr/local/hadoop
-export YARN_HOME=/usr/local/hadoop
-export PATH=$PATH:/usr/local/hadoop/bin
-export PATH=$PATH:/usr/local/hadoop/sbin
-# HADOOP NATIVE PATH
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-export HADOOP_OPTS=-Djava.library.path=$HADOOP_PREFIX/lib
-export PATH="$PATH:/usr/local/bin/ignition"
-alias ignition="/usr/local/bin/ignition/ignition.sh"
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
